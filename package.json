@@ -1,6 +1,6 @@
 {
   "name": "quotations",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "some of my favorite quotations",
   "dependencies": {
     "aws-sdk": "^2.387.0",
@@ -22,7 +22,8 @@
     "dev:build:watch": "webpack -w --config ./config/webpack.dev.js",
     "dev:start": "serve --single",
     "release": "yarn version && now alias",
-    "test": "ava"
+    "test": "ava",
+    "upload": "node src/lib/aws/batchUpload.js"
   },
   "author": "wesley",
   "license": "ISC",

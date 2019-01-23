@@ -1,4 +1,4 @@
-import renderCards from './renderCards'
+import renderCards from '../renderCards'
 
 export default function filterCards({ target }) {
   const subject = target.getAttribute('data-subject')

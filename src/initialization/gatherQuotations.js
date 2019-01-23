@@ -1,5 +1,5 @@
 import { showLoader, hideLoader } from '../components/loaders.js'
-import list from "./aws/list"
+import list from "../lib/aws/list"
 
 export default async function gatherQuotations() {
   let quotations
