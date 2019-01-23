@@ -1,5 +1,5 @@
-import makeButtons from './lib/callbacks/makeButtons'
-import shapeSubjects from './lib/shapeSubjects'
+import makeButtons from '../lib/callbacks/makeButtons'
+import shapeSubjects from '../lib/shapeSubjects'
 
 const { bind } = hyperHTML
 

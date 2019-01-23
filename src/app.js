@@ -1,7 +1,7 @@
-import makeState from './makeState'
-import gatherQuotations from './gatherQuotations'
-import renderCards from './renderCards'
-import addFilters from './addFilters'
+import makeState from './initialization/makeState'
+import gatherQuotations from './initialization/gatherQuotations'
+import renderCards from './lib/renderCards'
+import addFilters from './initialization/addFilters'
 
 async function startApp() {
   makeState()
