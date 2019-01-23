@@ -3,3 +3,4 @@
 node_modules/
 public/js/*.js
 tachyons/
+src/lib/aws/awsconfig.json
