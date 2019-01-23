@@ -3,8 +3,6 @@ const { accessKeyId, secretAccessKey } = require('./awsconfig')
 const dynamodb = new AWS.DynamoDB({ region: 'us-east-1', accessKeyId, secretAccessKey })
 const { marshall } = AWS.DynamoDB.Converter
 
-console.log('uploading')
-
 exports.batchUpload = function batchUpload(array, tableName = 'quotations', batchSize = 20) {
   const batchParams = {
     RequestItems: {
