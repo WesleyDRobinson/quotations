@@ -1,7 +1,8 @@
+// [].map() callback
 const { wire } = hyperHTML
 
-export default function mapQuotations(quotation, i) {
-  quotation.style = `order: ${quotation.order || i + 100};`
+export default function mapQuotations(quotation, index, array) {
+  quotation.style = `order: ${quotation.order || index + 100};`
   quotation.render += ` mt0`
   quotation.slug = quotation.text.slice(0, 21).replace(/ /g, '-').toLowerCase()
   quotation.rootClass = 'cf w-100 measure mv3 pa3 br2 near-black bg-near-white shadow-2 avenir lh-copy'

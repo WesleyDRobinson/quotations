@@ -1,4 +1,4 @@
-import mapQuotations from './mapQuotations'
+import mapQuotations from './lib/callbacks/mapQuotations'
 
 const { bind } = hyperHTML
 

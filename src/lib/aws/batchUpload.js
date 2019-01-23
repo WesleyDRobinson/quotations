@@ -1,14 +1,11 @@
-const marriageQuotations = require('./marriage')
 const AWS = require('aws-sdk')
-const { accessKeyId, secretAccessKey } = require('../awsconfig')
+const { accessKeyId, secretAccessKey } = require('./awsconfig')
 const dynamodb = new AWS.DynamoDB({ region: 'us-east-1', accessKeyId, secretAccessKey })
 const { marshall } = AWS.DynamoDB.Converter
 
-batchUpload(marriageQuotations)
+console.log('uploading')
 
-module.exports = batchUpload
-
-function batchUpload(array, tableName = 'quotations', batchSize = 20) {
+exports.batchUpload = function batchUpload(array, tableName = 'quotations', batchSize = 20) {
   const batchParams = {
     RequestItems: {
       [tableName]: []
@@ -42,3 +39,6 @@ function flush({ batch, tableName }) {
   })
 }
 
+// node.js usage... uncomment the following two lines and run `yarn upload`
+// const marriageQuotations = require('./uploads/marriage')
+// batchUpload(marriageQuotations)

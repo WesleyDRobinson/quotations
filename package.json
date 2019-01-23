@@ -22,7 +22,8 @@
     "dev:build:watch": "webpack -w --config ./config/webpack.dev.js",
     "dev:start": "serve --single",
     "release": "yarn version && now alias",
-    "test": "ava"
+    "test": "ava",
+    "upload": "node src/lib/aws/batchUpload.js"
   },
   "author": "wesley",
   "license": "ISC",
